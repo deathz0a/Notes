@@ -2,3 +2,51 @@
 		Curso Profesional de Git and GitHub	
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+
+	***Clase 6: Tipos de archivos y sus diferencias:***
+https://platzi.com/clases/1557-git-github/19938-editores-de-codigo-archivos-binarios-y-de-texto-pl/
+
+
+
+1. Archivos de texto(.txt): Texto plano normal. Lo vemos igual sin importar donde lo abramos, ya sea con el bloc de notas o con editores de texto avanzados.
+
+2. Archivos RTF(.rtf): Podemos guardar texto con diferentes tamanaños, estilos y colores, Pero si lo abrimos desde un editor de codigo, vamos a ver que es mucho mas complejo que solo el texto plano.
+Esto es porque deve guardar todos los estilos del texto y para esto se usa un codigo muy diferente a los textos con estilos espeaciales al que estamos habituados.
+
+3. Archivos de WORD(.docx): Podemos guardar imagenes y texto con diferentes tamaños, estilos o colores. Al abrirlo desde un editor de codigo podemos ver que es codigo binario, muy dificil de entender y muy diferente al texto al que estamos acostumbrados. Esto es porque Word esta optimizado para entender este codigo especial y reprensentalo graficamente.
+
+
+***Conceptos importantes de Git***
+
+1. Bug: Error en el código
+
+2. Repository: Donde se almacena todo el proyecto, el cual puede vivir tanto en local como en remoto. El repositorio guarda un historial de versiones y, más importante, de la relación de cada versión con la anterior para que pueda hacerse el árbol de versiones con las diferentes ramas.
+
+3. Fork: Si en algún momento queremos contribuir al proyecto de otra persona, o si queremos utilizar el proyecto de otro como el punto de partida del nuestro. Esto se conoce como “fork”.
+
+4. Clone: Una vez se decide hacer un fork , hasta ese momento sólo existe en GitHub. Para poder trabajar en el proyecto, toca clonar el repositorio elegido al computador personal.
+
+5. Branch: Es una bifurcación del proyecto que se está realizando para anexar una nueva funcionalidad o corregir un bug.
+
+6. Master: Rama donde se almacena la última versión estable del proyecto que se está realizando. La rama master es la que está en producción en cada momento (o casi) y debería estar libre de bugs. Así, si esta rama está en producción, sirve como referente para hacer nuevas funcionalidades y/o arreglar bugs de última hora.
+
+7. Commit: consiste en subir cosas a la versión local del repositorio. De esta manera se puede trabajar en la rama de forma local sin tener que modificar ninguna versión en remoto ni tener que tener la última versión remota, cosa muy útil en grandes desarrollos trabajados por varias personas.
+
+8. Push: Consiste en enviar todo lo que se ha confirmado con un commit al repositorio remoto. Aquí es donde se une nuestro trabajo con el de los demás.
+
+9. Checkout: Acción de descargarse una rama del repositorio GIT local (sí, GIT tiene su propio repositorio en local para poder ir haciendo commits) o remoto.
+
+10. Fetch: Actualiza el repositorio local bajando datos del repositorio remoto al repositorio local sin actualizarlo, es decir, se guarda una copia del repositorio remoto en el local.
+
+11. Merge: La acción de merge es la continuación natural del fetch. El merge permite unir la copia del repositorio remoto con tu repositorio local, mezclando los diferentes códigos.
+
+12. Pull: Consiste en la unión del fetch y del merge, esto es, recoge la información del repositorio remoto y luego mezcla el trabajo en local con esta.
+
+13. Diff: Se utiliza para mostrar los cambios entre dos versiones del mismo archivo.
+
+
+
+	***Clase 7: Introduccion a la terminal y linea de comandos(fast review)***
+https://platzi.com/clases/1557-git-github/19937-introduccion-a-la-terminal-y-linea-de-comandos/
+
+1. 
