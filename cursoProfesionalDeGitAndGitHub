@@ -1,5 +1,5 @@
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Curso
-Profesional de Git and GitHub
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+		Curso Profesional de Git and GitHub
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ***Clase 6: Tipos de archivos y sus diferencias:***
@@ -88,9 +88,16 @@ https://platzi.com/clases/1557-git-github/19938-editores-de-codigo-archivos-bina
 ***Clase 7: Introduccion a la terminal y linea de comandos(fast review)***
 https://platzi.com/clases/1557-git-github/19937-introduccion-a-la-terminal-y-linea-de-comandos/
 
-	1.	papa perro pedro paco enable papel papel papel papel papel
-	papel papel papel paoel paoel papel papel papel papale papelp
-	asdfasdfasdf asdfffffffff afdddddddddddddddddddd
-	asaaaaaaaaaaaasdffsdfas
-	adsfasdfssssssssssssssssssssssssssssssssssssssssssffffffffffffffffs
-	sssssssssssdf. 
+	1. pwd: Indica el lugar de los directorios donde estoy ahora.
+
+	2. ls -al: Muestra todos los directorios y archivos ocultos con un formato
+	humano.
+
+	3. cd <directorio1/directorio2/>: Ingresa a un directorio
+
+	4. mkdir <directoryName>: Crea un directorio.  
+
+	5. touch <directoryName>: Crea un archivo vacio.
+
+***Crea un repositorio de Git y haz tu primer commit***
+s
