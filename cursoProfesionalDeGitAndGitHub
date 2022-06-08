@@ -2,7 +2,10 @@
 		Curso Profesional de Git and GitHub
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-***Clase 6: Tipos de archivos y sus diferencias:***
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+	Clase 6: Tipos de archivos y sus diferencias:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 https://platzi.com/clases/1557-git-github/19938-editores-de-codigo-archivos-binarios-y-de-texto-pl/
 
 
@@ -26,7 +29,7 @@ https://platzi.com/clases/1557-git-github/19938-editores-de-codigo-archivos-bina
 	graficamente.
 
 
-***Conceptos importantes de Git***
+***Clase 6: Conceptos importantes de Git***
 
 	1. Bug: Error en el código
 
@@ -85,8 +88,13 @@ https://platzi.com/clases/1557-git-github/19938-editores-de-codigo-archivos-bina
 
 
 
-***Clase 7: Introduccion a la terminal y linea de comandos(fast review)***
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+	Clase 7: Introduccion a la terminal y linea de comandos(fast review)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 https://platzi.com/clases/1557-git-github/19937-introduccion-a-la-terminal-y-linea-de-comandos/
+
+
 
 	1. pwd: Indica el lugar de los directorios donde estoy ahora.
 
@@ -99,49 +107,120 @@ https://platzi.com/clases/1557-git-github/19937-introduccion-a-la-terminal-y-lin
 
 	5. touch <directoryName>: Crea un archivo vacio.
 
-***Crea un repositorio de Git y haz tu primer commit***
 
-Le indicaremos a Git que queremos crear un nuevo repositorio para utilizar su
-sistema de control de versiones. Solo debemos posicionarnos en la carpeta raíz
-de nuestro proyecto y ejecutar el comando:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	Clase 8: Crea un repositorio de Git y haz tu primer commit
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+https://platzi.com/clases/1557-git-github/19936-crea-un-repositorio-de-git-y-haz-tu-primer-commit/
 
-git init
 
-Recuerda que al ejecutar este comando (y de aquí en adelante) vamos a tener una
-nueva carpeta oculta llamada .git con toda la base de datos con cambios
-atómicos en nuestro proyecto.
 
-Recuerda que Git está optimizado para trabajar en equipo, por lo tanto, debemos
-darle un poco de información sobre nosotros. No debemos hacerlo todas las veces
-que ejecutamos un comando, basta con ejecutar solo una sola vez los siguientes
-comandos con tu información:
+	Le indicaremos a Git que queremos crear un nuevo repositorio para
+	utilizar su sistema de control de versiones. Solo debemos posicionarnos
+	en la carpeta raíz de nuestro proyecto y ejecutar el comando:
 
-git config --global user.email "tu@email.com" git config --global user.name "Tu
-Nombre" Existen muchas otras configuraciones de Git que puedes encontrar
-ejecutando el comando git config --list (o solo git config para ver una
-explicación más detallada).
+		git init
 
-Si quieres ver los archivos ocultos de una carpeta puedes habilitar la opción
-de Vista > Mostrar u ocultar > Elementos ocultos (en Windows) o ejecutar el
-comando ls -a.
+	Recuerda que al ejecutar este comando (y de aquí en adelante) vamos a
+	tener una nueva carpeta oculta llamada .git con toda la base de datos
+	con cambios atómicos en nuestro proyecto.
 
->>Comandos para iniciar tu repositorio con Git<<	
-1. git init: para inicializar el repositorio git y el staged.  2. git add
-nombre_del_archivo.txt: enviar el archivo al staged.  3. git status: ver el
-estado, si se requiere agregar al starget o si se requiere commit.  4. git
-conf: para ver las posibles configuraciones.  5. git conf --list: para ver la
-lista de configuraciones hechas 6. git conf --list --show-origin: para mostrar
-las configuraciones y sus rutas 7. git rm --cached nombre_del_archivo.txt: para
-eliminar el archivo del staged(ram) 8. git rm nombre_del_archivo.txt: para
-eliminar del repositorio 
+	Recuerda que Git está optimizado para trabajar en equipo, por lo tanto,
+	debemos darle un poco de información sobre nosotros. No debemos hacerlo
+	todas las veces que ejecutamos un comando, basta con ejecutar solo una
+	sola vez los siguientes comandos con tu información:
 
-Si por algún motivo te equivocaste en el nombre o email que configuraste al principio, lo puedes modificar de la siguiente manera:
-git config --global --replace-all user.name “Aquí va tu nombre modificado” 
+		git config --global user.email "tu@email.com" 
 
-O si lo deseas eliminar y añadir uno nuevo 
-git config --global --unset-all user.name :Elimina el nombre del usuario 
-git config --global --add user.name “Aquí va tu nombre”
+	git config --global user.name "Tu Nombre" Existen muchas otras
+	configuraciones de Git que puedes encontrar ejecutando el comando git
+	config --list (o solo git config para ver una explicación más
+	detallada).
 
-Aporte creado por: Brand Huatarongo
+	Si quieres ver los archivos ocultos de una carpeta puedes habilitar la
+	opción de Vista > Mostrar u ocultar > Elementos ocultos (en Windows) o
+	ejecutar el comando ls -a.
 
-Archivos de la clase
+***Clase 8: COMANDOS PARA INICIAR TU REPOSITORIO CON GIT***	
+
+	1. git init: para inicializar el repositorio git y el staged.
+
+	2. git add nombre_del_archivo.txt: enviar el archivo al staged.
+
+	3. git status: ver el estado, si se requiere agregar al starget o si se
+	requiere commit.
+
+	4. git conf: para ver las posibles configuraciones.
+
+	5. git conf --list: para ver la lista de configuraciones hechas
+
+	6. git conf --list --show-origin: para mostrar las configuraciones y
+	sus rutas
+
+	7. git rm --cached nombre_del_archivo.txt: para eliminar el archivo del
+	staged(ram)
+
+	8. git rm nombre_del_archivo.txt: para eliminar del repositorio.
+
+
+	Si por algún motivo te equivocaste en el nombre o email que
+	configuraste al principio, lo puedes modificar de la siguiente manera: 
+
+		git config --global --replace-all user.name “Aquí va tu nombre
+		modificado” 
+
+	O si lo deseas eliminar y añadir uno nuevo
+
+		git config --global --unset-all user.name : Elimina el nombre
+		del usuario 
+
+		git config --global --add user.name “Aquí va tu nombre”
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+	Clase 8: Analizar cambios en los archivos de tu proyecto con git
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+https://platzi.com/clases/1557-git-github/19936-crea-un-repositorio-de-git-y-haz-tu-primer-commit/
+
+
+
+	El comando >>git show<< nos muestra los cambios que han existido sobre un
+archivo y es muy util para detectar cuando se produjeron ciertos cambios, que
+se rompio y como lo podemos solucionar. Pero podemos ser mas detallados.  
+
+	Si queremos ver la direncia entre una version y otra, no necesitamos todos los
+cambios existentes desde la creacion del archivo. Podemos usar el comando >>
+git diff commitA commitB<<.  
+
+	Recuerda que puedes obtener el ID de tus commits con el comando >>git log<<
+
+***Clase 8: COMANDOS PARA ANALIZAR CAMBIOS EN GIT.***
+	-git init: inicializar el repositorio
+
+	-git add nombre_de_archivo.extensión: agregar el archivo al repositorio
+	
+	-git commit -m “Mensaje”: Agregamos los cambios para el repositorio
+	
+	-git add: Agregar los cambios de la carpeta en la que nos encontramos agregar todo
+
+	-git status: visualizar cambios
+
+	-git log nombre_de_archivos.extensión: histórico de cambios con detalles
+	
+	-git push: envía a otro repositorio remoto lo que estamos haciendo
+
+	-git pull: traer repositorio remoto
+
+	-ls: listado de carpetas en donde me encuentro. Es decir, como emplear dir en windows.
+pwd: ubicación actual
+mkdir: make directory nueva carpeta
+touch archivo.extensión: crear archivo vacío
+cat archivo.extensión: muestra el contenido del archivo
+history: historial de comandos utilizados durante esa sesión
+rm archivo.extensión: Eliminación de archivo
+comando --help: ayuda sobre el comando
+git checkout: traer cambios realizados
+git rm --cached archivo.extensión: se utiliza para devolver el archivo que se tiene en ram. Cuando escribimos git add, lo devuelve a estado natural mientras está en staging.
+git config --list: muestra la lista de configuración de git
+git config --list --show-origin: rutas de acceso a la configuración de git
+git log archivo.extensión: muestra la historia del archivo
