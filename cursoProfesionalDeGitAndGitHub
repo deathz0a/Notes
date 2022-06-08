@@ -265,7 +265,9 @@ https://platzi.com/clases/1557-git-github/19946-que-es-el-staging-y-los-reposito
 	comando especial para eso) y nos permitirá, más adelante, guardar estos
 	cambios en el repositorio (también con un comando especial).
 
-***Clase 10.1: Ciclo de vida o estados de los archivos en Git:
+***Clase 10.1: Ciclo de vida o estados de los archivos en Git:***
+>>Imagen ilustrativa:
+	/home/deathzoa/personalProjects/Notes/Images/estadosGit.jpg
 
 	Cuando trabajamos en Git nuestros archibos pueden vivir y moverse entre
 	4 diferentes estados (cuando trabajamos con repositorios remotos pueden
