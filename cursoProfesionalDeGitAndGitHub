@@ -333,6 +333,34 @@ https://platzi.com/clases/1557-git-github/19946-que-es-el-staging-y-los-reposito
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
-	Clase 11:
+	Clase 11: Que es un Branch (rama) y como funciona un Merge en Git?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-h
+https://platzi.com/clases/1557-git-github/19947-que-es-un-branch-rama-y-como-funciona-un-merge-en-/
+
+
+
+***Clase 11: Recursos importantes para recodar y estudiar***
+
+	1. git-flow cheatsheet (Varios Idiomas[Español incluido]:
+	https://danielkummer.github.io/git-flow-cheatsheet/
+
+	2. Gitflow Workflow:
+	https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow
+
+	En git, una rama o branch es una version del codigo del proyecto sobre
+	el que estas trabajando. Estas ramas ayudan a mantener el orden en el
+	control de versiones y manipular el codigo de forma segura.
+
+	Ejemplo:
+	https://static.platzi.com/media/user_upload/GIT_Branch-6809996b-6dec-48d7-9469-1412f337c25d.jpg
+
+	Todos los commit se aplican sobre una rama. Por defecto, siempre
+	empezamos en la rama Main  y generamos nuevas ramas a partir de esta
+	para generar nuevos flujos de trabajo independientes.
+
+***Clase11: Checkout y merge***
+
+	Producir una nueva rama se conoce como >>Checkouk<<.
+
+	Unir dos ramas se conoce como Merge. El codigo se fusiona originando
+	una nueva version de la rama Master.
