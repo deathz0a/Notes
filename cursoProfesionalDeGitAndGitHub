@@ -302,34 +302,49 @@ https://platzi.com/clases/1557-git-github/19946-que-es-el-staging-y-los-reposito
 
 ***Clase 10.2: Comandos para mover archivos entro los estados de Git:***
 
-	-git status: nos permite ver el estado de todos nuestros archivos y
-	carpetas.
-	
-	-git add: nos ayuda a mover archivos del Untracked o Unstaged al estado
-	Staged. Podemos usar git nombre-del-archivo-o-carpeta para añadir
-	archivos y carpetas individuales o git add -A para mover todos los
-	archivos de nuestro proyecto (tanto Untrackeds como unstageds).
+	git status
 
-	-git reset HEAD: nos ayuda a sacar archivos del estado Staged para
-	devolverlos a su estado anterior. Si los archivos venían de Unstaged,
-	vuelven allí. Y lo mismo se venían de Untracked.
+		Nos permite ver el estado de todos nuestros archivos y
+		carpetas.
 	
-	-git commit: nos ayuda a mover archivos de Unstaged a Tracked. Esta es
-	una ocasión especial, los archivos han sido guardados o actualizados en
-	el repositorio. Git nos pedirá que dejemos un mensaje para recordar los
-	cambios que hicimos y podemos usar el argumento -m para escribirlo (git
-	commit -m "mensaje").
+	git add . 
 
-	-git rm: este comando necesita alguno de los siguientes argumentos para
+		Nos ayuda a mover archivos del Untracked o Unstaged al estado
+		Staged. Podemos usar git nombre-del-archivo-o-carpeta para
+		añadir archivos y carpetas individuales o git add -A para mover
+		todos los archivos de nuestro proyecto (tanto Untrackeds como
+		unstageds).
+
+	git reset HEAD
+
+		Nos ayuda a sacar archivos del estado Staged para devolverlos a
+		su estado anterior. Si los archivos venían de Unstaged, vuelven
+		allí. Y lo mismo se venían de Untracked.
+	
+	git commit
+
+		Nos ayuda a mover archivos de Unstaged a Tracked. Esta es una
+		ocasión especial, los archivos han sido guardados o
+		actualizados en el repositorio. Git nos pedirá que dejemos un
+		mensaje para recordar los cambios que hicimos y podemos usar el
+		argumento -m para escribirlo (git commit -m "mensaje").
+
+	git rm
+
+	Este comando necesita alguno de los siguientes argumentos para
 	poder ejecutarse correctamente:
 		
-		git rm --cached: Mueve los archivos que le indiquemos al estado
-		Untracked.
+		git rm --cached
 
-	-git rm --force: Elimina los archivos de Git y del disco duro. Git
-	guarda el registro de la existencia de los archivos, por lo que
-	podremos recuperarlos si es necesario (pero debemos usar comandos más
-	avanzados).
+			Mueve los archivos que le indiquemos al estado
+			Untracked.
+
+		git rm --force
+
+			Elimina los archivos de Git y del disco duro. Git
+			guarda el registro de la existencia de los archivos,
+			por lo que podremos recuperarlos si es necesario (pero
+			debemos usar comandos más avanzados).
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
@@ -366,8 +381,8 @@ https://platzi.com/clases/1557-git-github/19947-que-es-un-branch-rama-y-como-fun
 	una nueva version de la rama Master.
 
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Clase 12:
-Volver en el tiempo en nuestro repositorio utilizando reset y checkout
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+	Clase 12: Volver en el tiempo en nuestro repositorio utilizando reset y checkout
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 https://platzi.com/clases/1557-git-github/19948-volver-en-el-tiempo-en-nuestro-repositorio-utiliza/
 
@@ -393,10 +408,119 @@ https://platzi.com/clases/1557-git-github/19948-volver-en-el-tiempo-en-nuestro-r
 	Para volver a commits previos, borrando los cambios realizados desde
 	ese commit, podemos utilizar:
 
-	git reset --soft [SHA 1]: elimina los cambios hasta el staging area
+	git reset --soft [SHA 1]: 
 
-	git reset --mixed [SHA 1]: elimina los cambios hasta el working area
+		Elimina los cambios hasta el staging area
+
+	git reset --mixed [SHA 1]: 
+
+		Elimina los cambios hasta el working area
 	
-	git reset --hard [SHA 1]: regresa hasta el commit del [SHA-1]
+	git reset --hard [SHA 1]: 
+
+		Regresa hasta el commit del [SHA-1]
 	
-	Donde el SHA-1 es el identificador del commit.
+		Donde el SHA-1 es el identificador del commit.
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+	Clase 13: Volver en el tiempo en nuestro repositorio utilizando reset y checkout
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+https://platzi.com/clases/1557-git-github/23295-git-reset-vs-git-rm/
+
+
+
+	Git reset y git rm son comandos con utilidades muy diferentes, pero se
+	pueden confundir muy fácilmente.
+
+***Clase 13: git rm***
+
+	Este comando nos ayuda a eliminar archivos de Git sin eliminar su
+	historial del sistema de versiones. Esto quiere decir que si
+	necesitamos recuperar el archivo solo debemos “viajar en el tiempo” y
+	recuperar el último commit antes de borrar el archivo en cuestión.
+
+	Recuerda que git rm no puede usarse así nomás. Debemos usar uno de los
+	flags para indicarle a Git cómo eliminar los archivos que ya no
+	necesitamos en la última versión del proyecto:
+
+	git rm --cached: 
+
+		Elimina los archivos de nuestro repositorio local y del área de
+		staging, pero los mantiene en nuestro disco duro.  Básicamente
+		le dice a Git que deje de trackear el historial de cambios de
+		estos archivos, por lo que pasaran a un estado untracked.
+
+	git rm --force: 
+
+		Elimina los archivos de Git y del disco duro. Git siempre
+		guarda todo, por lo que podemos acceder al registro de la
+		existencia de los archivos, de modo que podremos recuperarlos
+		si es necesario (pero debemos usar comandos más avanzados).
+
+***Clase 13: git reset***
+
+	Este comando nos ayuda a volver en el tiempo. Pero no como git checkout
+	que nos deja ir, mirar, pasear y volver. Con git reset volvemos al
+	pasado sin la posibilidad de volver al futuro. Borramos la historia y
+	la debemos sobreescribir. No hay vuelta atrás.
+
+	Este comando es muy peligroso y debemos emplearlo solo en caso de
+	emergencia. Recuerda que debemos usar alguna de estas dos opciones:
+
+	Hay dos formas de utilizar git reset: con el argumento --hard, borrando
+	toda la información que tengamos en el área de staging (y perdiendo
+	todo para siempre). O, un poco más seguro, con el argumento --soft, que
+	mantiene allí los archivos del área de staging para que podamos aplicar
+	nuestros últimos cambios pero desde un commit anterior.
+
+	1. git reset --soft: Borramos todo el historial y los registros de Git
+	pero guardamos los cambios que tengamos en Staging, así podemos aplicar
+	las últimas actualizaciones a un nuevo commit.
+
+	2. git reset --hard: Borra todo. Todo todito, absolutamente todo. Toda
+	la información de los commits y del área de staging se borra del
+	historial.
+
+***Clase 13: ¡Pero todavía falta algo!***
+
+	git reset HEAD: Este es el comando para sacar archivos del área de
+	staging. No para borrarlos ni nada de eso, solo para que los últimos
+	cambios de estos archivos no se envíen al último commit, a menos que
+	cambiemos de opinión y los incluyamos de nuevo en staging con git add,
+	por supuesto.
+
+***Clase 13: ¿Por qué esto es importante?***
+
+	Imagina el siguiente caso:
+
+	Hacemos cambios en los archivos de un proyecto para una nueva
+	actualización. Todos los archivos con cambios se mueven al área de
+	staging con el comando git add. Pero te das cuenta de que uno de esos
+	archivos no está listo todavía. Actualizaste el archivo, pero ese
+	cambio no debe ir en el próximo commit por ahora.
+
+	¿Qué podemos hacer?
+
+	Bueno, todos los cambios están en el área de Staging, incluido el
+	archivo con los cambios que no están listos. Esto significa que debemos
+	sacar ese archivo de Staging para poder hacer commit de todos los
+	demás.
+
+	¡Al usar git rm lo que haremos será eliminar este archivo completamente
+	de git! Todavía tendremos el historial de cambios de este archivo, con
+	la eliminación del archivo como su última actualización. Recuerda que
+	en este caso no buscábamos eliminar un archivo, solo dejarlo como
+	estaba y actualizarlo después, no en este commit.
+
+	En cambio, si usamos git reset HEAD, lo único que haremos será mover
+	estos cambios de Staging a Unstaged. Seguiremos teniendo los últimos
+	cambios del archivo, el repositorio mantendrá el archivo (no con sus
+	últimos cambios, pero sí con los últimos en los que hicimos commit) y
+	no habremos perdido nada.
+
+	Conclusión: Lo mejor que puedes hacer para salvar tu puesto y evitar un
+	incendio en tu trabajo es conocer muy bien la diferencia y los riesgos
+	de todos los comandos de Git.
+
+
