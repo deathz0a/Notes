@@ -957,43 +957,93 @@ https://platzi.com/clases/1557-git-github/19950-configurar-llaves-ssh-en-github/
 
 
 
-	En este ejemplo, aprenderemos cómo configurar nuestras llaves SSH en local.
+	En este ejemplo, aprenderemos cómo configurar nuestras llaves SSH en
+	local.
 
 ***Clase 21: Como generar tus llaves SSH***
 
 	1. Generar tus llaves SSH**
 		
-		Recuerda que es muy buena idea proteger tu llave privada con una contraseña.
+		Recuerda que es muy buena idea proteger tu llave privada con
+		una contraseña.
 
 		ssh-keygen -t rsa -b 4096 -C "tu@email.com"
 
 	2. Terminar de configurar nuestro sistema.
 
-En Windows y Linux:
+		En Windows y Linux:
 
-Encender el “servidor” de llaves SSH de tu computadora:
+			Encender el “servidor” de llaves SSH de tu computadora:
 
-eval $(ssh-agent -s)
+				eval $(ssh-agent -s)
 
-Añadir tu llave SSH a este “servidor”:
+			Añadir tu llave SSH a este “servidor”:
 
-ssh-add ruta-donde-guardaste-tu-llave-privada
+				ssh-add ruta-donde-guardaste-tu-llave-privada
 
-En Mac:
+		En Mac:
 
-Encender el “servidor” de llaves SSH de tu computadora:
+			Encender el “servidor” de llaves SSH de tu computadora:
 
-eval "$(ssh-agent -s)"
+				eval "$(ssh-agent -s)"
 
-Si usas una versión de OSX superior a Mac Sierra (v10.12), debes crear o modificar un archivo “config” en la carpeta de tu usuario con el siguiente contenido (ten cuidado con las mayúsculas):
-Host *
+			Si usas una versión de OSX superior a Mac Sierra
+			(v10.12), debes crear o modificar un archivo “config”
+			en la carpeta de tu usuario con el siguiente contenido
+			(ten cuidado con las mayúsculas): Host *
 
-AddKeysToAgent yes
-UseKeychain yes
-IdentityFile ruta-donde-guardaste-tu-llave-privada
+			AddKeysToAgent yes UseKeychain yes IdentityFile
+			ruta-donde-guardaste-tu-llave-privada
 
-Añadir tu llave SSH al “servidor” de llaves SSH de tu computadora (en caso de error puedes ejecutar este mismo comando pero sin el argumento -K):
+			Añadir tu llave SSH al “servidor” de llaves SSH de tu
+			computadora (en caso de error puedes ejecutar este
+			mismo comando pero sin el argumento -K):
 
-ssh-add -K ruta-donde-guardaste-tu-llave-privada
+				ssh-add -K ruta-donde-guardaste-tu-llave-privada
 
 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+	Clase 22: Conexión a GitHub con SSH
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+https://platzi.com/clases/1557-git-github/19951-conexion-a-github-con-ssh/
+
+
+
+	La creación de las SSH es necesario solo una vez por cada computadora.
+	Aquí conocerás cómo conectar a GitHub usando SSH.
+
+	Luego de crear nuestras llaves SSH podemos entregarle la llave pública
+	a GitHub para comunicarnos de forma segura y sin necesidad de escribir
+	nuestro usuario y contraseña todo el tiempo.
+
+	Para esto debes entrar a la Configuración de Llaves SSH en GitHub,
+	crear una nueva llave con el nombre que le quieras dar y el contenido
+	de la llave pública de tu computadora.
+
+	Ahora podemos actualizar la URL que guardamos en nuestro repositorio
+	remoto, solo que, en vez de guardar la URL con HTTPS, vamos a usar la
+	URL con SSH:
+
+		ssh git remote set-url origin url-ssh-del-repositorio-en-github
+
+***Clase 22: Comandos para copiar la llave SSH:***
+
+	MAC
+
+		pbcopy < ~/.ssh/id_rsa.pub
+
+	Windows (Git Bash)
+
+		clip < ~/.ssh/id_rsa.pub
+
+	Linux
+
+		cat ~/.ssh/id_rsa.pub
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+	Clase 23: 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ht
