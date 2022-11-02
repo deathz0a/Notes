@@ -1819,6 +1819,58 @@ https://platzi.com/clases/1557-git-github/19981-reconstruir-commits-en-git-con-a
 	amend.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
-	Clase 41: 
+	Clase 41: Buscar en archivos y commits de Git con Grep y log 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-h
+https://platzi.com/clases/1557-git-github/19987-buscar-en-archivos-y-commits-de-git-con-grep-y-log/
+
+	Para buscar, empleamos el comando git grep color y nos buscará en todo
+	el proyecto los archivos en donde está la palabra color.
+
+		- Con 'git grep -n color' nos saldrá un output el cual nos dirá
+		  en qué línea está lo que estamos buscando.
+
+		- Con git grep -c color nos saldrá un output el cual nos dirá
+		  cuántas veces se repite esa palabra y en qué archivo.
+
+		- Si queremos buscar cuántas veces utilizamos un atributo de
+		  HTML lo hacemos con git grep -c "<p>".
+
+		- Si agregas la bandera -i ya no es sensible a mayúsculas y
+		  minúsculas!  $ git grep -i "<p>"
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+	Clase 42: Comandos y recursos colaborativos en Git y GitHub
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+https://platzi.com/clases/1557-git-github/19986-comandos-y-recursos-colaborativos-en-git-y-github/
+
+	A continuación veremos una lista de comandos colaborativos para facilitar el trabajo remoto en GitHub:
+
+		- Muestra cuantos commit han hecho cada miembro del equipo.
+
+			git shortlog -sn
+
+		- muestra cuantos commit han hecho cada miembro del equipo, hasta los que han sido eliminados.
+
+			git shortlog -sn --all
+
+		- muestra cuantos commit ha hecho cada miembro, quitando los eliminados sin los merges.
+
+			git shortlog -sn --all --no-merge
+
+		- muestra quien hizo cada cosa línea por línea.
+
+			- git blame ARCHIVO
+
+		- muestra como funciona el comando.
+
+			- git COMANDO --help
+
+		- muestra quien hizo cada cosa línea por línea, indicándole desde qué línea ver. Ejemplo -L35,50.
+
+			- git blame ARCHIVO -Llinea_inicial,linea_final
+
+		- se muestran todas las ramas remotas.
+
+		- se muestran todas las ramas, tanto locales como remotas.
